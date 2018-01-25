@@ -1,6 +1,10 @@
-varying vec3 lightDir,pos;
+varying vec3 lightDir,pos,normal;
 
 void main() {
-	vec3 l = normalize(lightDir);
-	gl_FragColor = vec4(abs(l),1);
+	vec l,n,eye;
+	n = normalize(normal);
+	l = normalize(lightDir);
+	eye = normalize(-pos);
+	vec4 color;
+	gl_FragColor = color;
 }
